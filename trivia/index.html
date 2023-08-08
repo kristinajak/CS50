@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            //TODO: Add code to chck answers to questions
+
+            document.addEventListener('DOMContentLoaded', function() {
+
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function()
+                {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#output1').innerHTML = "Correct!";
+
+                });
+
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++)
+                {
+                    incorrects[i].addEventListener('click', function () {
+                        incorrects[i].style.backgroundColor = 'red';
+                        document.querySelector('#output1').innerHTML = "Incorrect";
+                    });
+                }
+
+                document.querySelector('#submitButton').addEventListener('click', function () {
+                    let answer = document.querySelector('#textValue');
+                    if (answer.value === '6' || answer.value === 'six')
+                        {
+                            answer.style.backgroundColor = 'green';
+                            document.querySelector('#output4').innerHTML = "Correct!";
+                        }
+
+                        else
+                        {
+                            answer.style.backgroundColor = 'red';
+                            document.querySelector('#output4').innerHTML = "Incorrect!";
+                        }
+                    });
+                });
+
+        </script>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>In which country does the Santa Clause live?</h3>
+                <p id="output1"></p>
+
+                <button class="correct" id="Finland">Finland</button>
+                <button class="incorrect" id="Australia">Australia</button>
+                <button class="incorrect" id="Canada">Canada</button>
+                <button class="incorrect" id="Greenland">Greenland</button>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>How many elves does the Santa Clause have?</h3>
+                <p id="output4"></p>
+
+                <input name="e" type="text" id="textValue" />
+                <input name="f" type="submit" value="Check answer" id="submitButton" />
+
+            </div>
+        </div>
+    </body>
+</html>

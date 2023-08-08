@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: In the best case scenario (numbers already sorted) it uses less time to run. However, in the worst case scenario (numbers reversted) it uses much more time than sort2 meaning that it is not a merge sort.
+
+sort2 uses: Merge sort
+
+How do you know?: In the worst case scenario (numbers reversed) it uses the least time to have the numbers sorted. Also, the time spent to run the program on both best and worst scenarios are similar.
+
+sort3 uses: Selection sort
+
+How do you know?: Similar time used to run on both best and worst case scenarios. However, the run time in the worst case scenario is worse than with sort2 meaning that it is not a merge sort.check50 cs50/labs/2022/x/sort
